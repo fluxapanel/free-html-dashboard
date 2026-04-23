@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxa | Marketing Dashboard</title>
+    <meta name="description" content="Fluxa - Marketing Dashboard variant.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <img src="../assets/img/logo.png" alt="Fluxa Logo" style="width: 32px; height: 32px; border-radius: 8px;">
+                    <span class="logo-text">Fluxa</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <p class="menu-label">Main Menu</p>
+                <ul class="menu-list">
+                    <li class="menu-item has-submenu open">
+                        <a class="menu-link">
+                            <i data-lucide="layout-dashboard"></i>
+                            <span>Dashboard</span>
+                            <i data-lucide="chevron-down" class="arrow"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="analytics.html" class="submenu-link">Analytics</a></li>
+                            <li><a href="ecommerce.html" class="submenu-link">Ecommerce</a></li>
+                            <li><a href="crm.html" class="submenu-link">CRM</a></li>
+                            <li><a href="finance.html" class="submenu-link">Finance</a></li>
+                            <li><a href="projects.html" class="submenu-link">Project</a></li>
+                            <li><a href="marketing.html" class="submenu-link active">Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="analytics.html" class="menu-link">
+                            <i data-lucide="bar-chart-2"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="menu-label">Apps</p>
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="ecommerce.html" class="menu-link">
+                            <i data-lucide="shopping-bag"></i>
+                            <span>Ecommerce</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i data-lucide="mail"></i>
+                            <span>Email</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i data-lucide="message-square"></i>
+                            <span>Chat</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i data-lucide="calendar"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div style="padding: 1rem; border-top: 1px solid var(--border-color);">
+                <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 1rem; border-radius: 12px; color: white;">
+                    <p style="font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem;">Upgrade to Pro</p>
+                    <button style="width: 100%; padding: 0.5rem; border: none; border-radius: 8px; background: white; color: var(--primary); font-weight: 700; font-size: 0.75rem; cursor: pointer;">Upgrade Now</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="header-icon-btn" id="sidebar-toggle">
+                        <i data-lucide="menu"></i>
+                    </button>
+                    <div class="search-bar">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search campaigns, ads, keywords...">
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <button class="header-icon-btn" id="theme-toggle">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+                    <button class="header-icon-btn">
+                        <i data-lucide="bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+                    <div class="user-profile">
+                        <img src="https://ui-avatars.com/api/?name=Fluxa+User&background=6366f1&color=fff" alt="User Avatar" class="user-avatar">
+                        <div class="user-info">
+                            <p class="name">Garegin H.</p>
+                            <p class="role">Administrator</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-page">
+                <div class="page-header">
+                    <h1>Marketing Dashboard</h1>
+                    <p>Monitor your marketing campaigns and performance metrics.</p>
+                </div>
+
+                <!-- Marketing Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon primary"><i data-lucide="megaphone"></i></div>
+                            <div class="stat-trend up"><i data-lucide="trending-up"></i><span>15%</span></div>
+                        </div>
+                        <p class="stat-value">$45,200</p>
+                        <p class="stat-label">Total Ad Spend</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon secondary"><i data-lucide="mouse-pointer-2"></i></div>
+                            <div class="stat-trend up"><i data-lucide="trending-up"></i><span>8%</span></div>
+                        </div>
+                        <p class="stat-value">1,240</p>
+                        <p class="stat-label">Total Conversions</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon success"><i data-lucide="target"></i></div>
+                            <div class="stat-trend down"><i data-lucide="trending-down"></i><span>2%</span></div>
+                        </div>
+                        <p class="stat-value">$0.85</p>
+                        <p class="stat-label">Avg. CPC</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon warning"><i data-lucide="pie-chart"></i></div>
+                            <div class="stat-trend up"><i data-lucide="trending-up"></i><span>22%</span></div>
+                        </div>
+                        <p class="stat-value">320%</p>
+                        <p class="stat-label">Overall ROI</p>
+                    </div>
+                </div>
+
+                <!-- Marketing Charts -->
+                <div class="charts-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Campaign Traffic</h2>
+                        </div>
+                        <div style="height: 350px;">
+                            <canvas id="trafficChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Acquisition Channels</h2>
+                        </div>
+                        <div style="height: 350px;">
+                            <canvas id="channelChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Campaigns Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Active Campaigns</h2>
+                        <button class="header-icon-btn">View All</button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Campaign Name</th>
+                                    <th>Channel</th>
+                                    <th>Budget</th>
+                                    <th>Spend</th>
+                                    <th>Conv. Rate</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Summer Sale 2024</strong></td>
+                                    <td>Google Ads</td>
+                                    <td>$20,000</td>
+                                    <td>$12,450</td>
+                                    <td>5.2%</td>
+                                    <td><span class="badge badge-success">Running</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>New Collection Launch</strong></td>
+                                    <td>Facebook Ads</td>
+                                    <td>$15,000</td>
+                                    <td>$8,200</td>
+                                    <td>4.8%</td>
+                                    <td><span class="badge badge-success">Running</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Brand Awareness</strong></td>
+                                    <td>Instagram</td>
+                                    <td>$10,000</td>
+                                    <td>$5,100</td>
+                                    <td>3.2%</td>
+                                    <td><span class="badge badge-warning">Paused</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>B2B Re-targeting</strong></td>
+                                    <td>LinkedIn</td>
+                                    <td>$5,000</td>
+                                    <td>$3,450</td>
+                                    <td>6.1%</td>
+                                    <td><span class="badge badge-success">Running</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Traffic Chart
+        const trafficCtx = document.getElementById('trafficChart').getContext('2d');
+        new Chart(trafficCtx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Ad Clicks',
+                    data: [1200, 1900, 1500, 2100, 2400, 1800, 2200],
+                    borderColor: '#6366f1',
+                    tension: 0.4,
+                    fill: true,
+                    backgroundColor: 'rgba(99, 102, 241, 0.1)'
+                }, {
+                    label: 'Conversions',
+                    data: [80, 120, 100, 150, 180, 130, 160],
+                    borderColor: '#ec4899',
+                    tension: 0.4,
+                    fill: true,
+                    backgroundColor: 'rgba(236, 72, 153, 0.1)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                },
+                scales: {
+                    y: { beginAtZero: true, grid: { display: false } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Channel Chart
+        const channelCtx = document.getElementById('channelChart').getContext('2d');
+        new Chart(channelCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Google', 'Facebook', 'Instagram', 'LinkedIn', 'Other'],
+                datasets: [{
+                    data: [40, 25, 20, 10, 5],
+                    backgroundColor: ['#6366f1', '#ec4899', '#f59e0b', '#10b981', '#94a3b8']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
