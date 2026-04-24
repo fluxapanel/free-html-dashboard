@@ -1,6 +1,6 @@
 # Fluxa Admin Panel
 
-![Fluxa Logo](assets/img/logo.png)
+![Fluxa Logo](assets/img/cover.png)
 
 [![GitHub license](https://img.shields.io/github/license/fluxapanel/free-html-dashboard)](https://github.com/fluxapanel/free-html-dashboard/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/fluxapanel/free-html-dashboard)](https://github.com/fluxapanel/free-html-dashboard/stargazers)
